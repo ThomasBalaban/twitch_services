@@ -40,7 +40,6 @@ async def _handle_twitch_message(msg):
     director_bridge.emit_twitch_message(username, text)
     director_bridge.emit_scored_event(username, text, is_mention)
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Auth is a coroutine now — await it directly (no asyncio.run)
